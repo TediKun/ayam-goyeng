@@ -1,0 +1,102 @@
+/* >>>>>>>
+ROOT CSS
+<<<<<<<<<< */
+:root {
+    /*   ##### Color  */
+    --color-primary: rgb(255, 255, 13);
+    --color-low: rgb(216, 216, 78);
+    --color-2: rgb(255, 203, 0);
+    --color-low2: rgba(255, 203, 0, 0.715);
+    --oxford-blue: hsla(221, 33%, 15%, 1);
+    --light-gray: hsla(216, 12%, 84%, 1);
+    --white: hsla(0, 0%, 100%, 1);
+    --white_low: hsla(0, 0%, 100%, 0.1);
+    --black: hsla(0, 0%, 0%, 1);
+    --black-low: rgba(0, 0, 0, 0.494);
+    /*#### */
+}
+
+/* >>>>>>>
+BASE CSS
+<<<<<<<<<< */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    width: 100%;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+    color: var(--black-low);
+    background-color: var(--white);
+}
+
+a {
+    text-decoration: none;
+    color: var(--black);
+}
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+button {
+    background: none;
+    border: none;
+    outline: none;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
