@@ -1,24 +1,62 @@
 /* ###### */
 /* // for general stylings (both, mobile && desktop) */
 @media (min-width: 320px) {
+    html {
+        font-size: 55%;
+    }
 }
 
 /* ###### */
 /* // for only styles between 320px and 768px (most mobile devies) */
 @media (max-width: 767px) {
+    html {
+        font-size: 56.6%;
+    }
 }
 
 /* ###### */
 /* // general desktop && tablet styles if needed */
 @media (min-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
 }
 
 /* ###### */
 /* // only tablet styles */
 @media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+    html {
+        font-size: 64%;
+    }
+    /*   ### Navbar Start */
+    .nav-navbar {
+        width: 40%;
+        height: 100vh;
+    }
+    .nav-navbar .nav-link {
+        padding: 1.2rem 1.6rem;
+    }
+
+    /*   ### Navbar End */
 }
 
 /* ###### */
 /* //start with desktop styling */
 @media (min-width: 1025px) {
+    .container {
+        width: 90%;
+    }
+    /*   ### Navbar Start */
+    .nav-navbar {
+        width: 30%;
+        height: 100vh;
+    }
+    .nav-navbar .nav-link {
+        padding: 1.2rem 1.6rem;
+    }
+
+    /*   ### Navbar End */
 }

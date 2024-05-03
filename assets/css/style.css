@@ -4,7 +4,7 @@ ROOT CSS
 :root {
     /*   ##### Color  */
     --color-primary: rgb(255, 255, 13);
-    --color-low: rgb(216, 216, 78);
+    --color-low: rgba(255, 255, 13, 0.853);
     --color-2: rgb(255, 203, 0);
     --color-low2: rgba(255, 203, 0, 0.715);
     --oxford-blue: hsla(221, 33%, 15%, 1);
@@ -13,6 +13,43 @@ ROOT CSS
     --white_low: hsla(0, 0%, 100%, 0.1);
     --black: hsla(0, 0%, 0%, 1);
     --black-low: rgba(0, 0, 0, 0.494);
+    /*#### */
+
+    /*#### Font Root */
+    --heading-lg: 3.6rem;
+    --heading-lw: 2.6rem;
+    --title-lg: 2rem;
+    --title-lw: 1.8rem;
+    --paragraf-lg: 1.4rem;
+    --paragraf-lw: 1.2rem;
+
+    --fw-lg: 800;
+    --fw-md: 600;
+    --fw-low: 400;
+    /*#### */
+
+    /*#### Shadow Monart  */
+    --shadow-lg: 0 0 10px rgba(8, 11, 14, 0.721);
+    --shadow-md: 0 0 6px rgba(19, 24, 31, 0.713);
+    --shadow-lw: 0 0 3px rgba(22, 25, 29, 0.68);
+    --shadow-sm: 0 0 13px rgba(60, 72, 88, 0.369);
+
+    --linear-gradient-1: linear-gradient(
+        to top left,
+        hsla(67.3, 69.2%, 54.7%, 0.4) 0%,
+        hsla(42.7, 100%, 49.2%, 0.41)
+    );
+    --linear-gradient-2: linear-gradient(
+        to right,
+        hsl(38.1, 83%, 58%),
+        hsl(60.8, 72%, 51%)
+    );
+    /*#### */
+
+    /*#### Anim */
+    --transition-1: 0.25s ease;
+    --transition-2: 0.5s ease;
+    --transition-3: 0.3s linear;
     /*#### */
 }
 
@@ -27,12 +64,15 @@ BASE CSS
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+
 body {
     width: 100%;
     line-height: 1.4;
     -webkit-font-smoothing: antialiased;
     color: var(--black-low);
     background-color: var(--white);
+    height: 1000vh;
+    font-family: "Poppins", sans-serif;
 }
 
 a {
@@ -54,6 +94,21 @@ h5,
 h6 {
     overflow-wrap: break-word;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: var(--heading-lw);
+}
+
+p {
+    font-size: var(--paragraf-lw);
+    color: var(--black);
+}
+
 img,
 picture,
 video,
@@ -100,3 +155,82 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+/* ###  */
+.container {
+    max-width: 96%;
+    margin: 0 auto;
+}
+.navbar.sticky {
+    padding: 1.4rem 0;
+    background-color: var(--color-low);
+}
+
+/* ###  */
+
+/* ### Navbar Start */
+.navbar {
+    width: 100%;
+    background-color: var(--color-primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1.7rem 0;
+    transition: var(--transition-2);
+}
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.image-nav-logo {
+    width: 40px;
+    padding-bottom: 6px;
+}
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: var(--title-lg);
+    font-weight: var(--fw-lg);
+}
+
+.nav-logo span {
+    color: hsl(0, 100%, 33.2%);
+}
+.nav-navbar {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: var(--color-low2);
+    width: 60%;
+    height: 100vh;
+    transition: var(--transition-2);
+}
+.nav-navbar.active {
+    right: 0;
+}
+.nav-navbar .nav-link {
+    font-size: var(--paragraf-lg);
+    font-weight: var(--fw-lw);
+    display: block;
+    padding: 1.2rem;
+    margin-bottom: 4px;
+    transition: var(--transition-1);
+}
+.nav-navbar .nav-link:hover {
+    color: var(--white);
+}
+
+.nav-fitur {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.nav-fitur .fiture {
+    font-size: var(--title-lg);
+    padding: 2px 5px;
+}
+.nav-fitur .fiture.bars-menu {
+    font-size: var(--heading-lw);
+}
+/* ### Navbar End */
