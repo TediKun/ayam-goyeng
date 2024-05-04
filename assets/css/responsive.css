@@ -12,6 +12,29 @@
     html {
         font-size: 56.6%;
     }
+    /* Testimoni Start */
+    .testimoni .container .checkpoint {
+        border: none;
+        padding: 1rem 0.2rem 2rem;
+        transform: none;
+        max-width: 60rem;
+    }
+    .testimoni .container .checkpoint .box-testi {
+        padding: 1.4rem 1rem;
+    }
+    .testimoni .container .checkpoint::before {
+        width: 3px;
+        height: 3rem;
+        top: -2rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .testimoni .container .checkpoint .box-testi::before {
+        top: -1rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    /* Testimoni End */
 }
 
 /* ###### */

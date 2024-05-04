@@ -297,12 +297,14 @@ table {
 
 /* ### About Start */
 .about,
-.menu {
+.menu,
+.testimoni {
     width: 100%;
     padding: 8rem 0 2rem;
 }
 .about .heading,
-.menu .heading {
+.menu .heading,
+.testimoni .heading {
     position: relative;
     color: var(--black);
     text-align: center;
@@ -389,3 +391,99 @@ table {
     padding-top: 0.8rem;
 }
 /* ### Menu End */
+
+/* ### testimoni End */
+.testimoni .container {
+    padding-top: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.testimoni .heading {
+    padding-bottom: 2rem;
+}
+.checkpoint {
+    padding: 0.8rem 0;
+    max-width: 34rem;
+    position: relative;
+}
+.checkpoint:nth-child(odd) {
+    border-left: 1px solid var(--color-2);
+    padding-left: 3rem;
+    transform: translateX(17rem);
+}
+.checkpoint:nth-child(even) {
+    border-right: 1px solid var(--color-2);
+    padding-right: 3rem;
+    transform: translateX(-16.9rem);
+}
+.checkpoint:nth-child(odd)::before,
+.checkpoint:nth-child(even)::before {
+    content: "";
+    width: 3rem;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--color-2);
+}
+.checkpoint:nth-child(odd) .box-testi::before,
+.checkpoint:nth-child(even) .box-testi::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #bb0000;
+    box-shadow: var(--shadow-sm);
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+.checkpoint:nth-child(even)::before {
+    right: 0;
+}
+.checkpoint:nth-child(odd)::before {
+    left: 0;
+}
+.checkpoint:nth-child(even) .box-testi::before {
+    right: -4px;
+}
+.checkpoint:nth-child(odd) .box-testi::before {
+    left: -4px;
+}
+.checkpoint .box-testi {
+    padding: 1.2rem 0.8rem;
+    border: 1px solid var(--color-2);
+    border-radius: 0.4rem;
+}
+.box-testi .profil-testi {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.profil-testi .title-testi {
+    font-size: var(--paragraf-lg);
+    font-weight: var(--fw-lg);
+    color: var(--black);
+}
+.rating-testi {
+    padding: 0.5rem 0;
+}
+.rating-testi .icn-star {
+    color: var(--color-2);
+    text-shadow: var(--shadow-sm);
+}
+.rating-testi .no-rattesti {
+    font-size: 0.9rem;
+    font-weight: var(--fw-lg);
+    color: var(--black-low);
+    padding-left: 0.3rem;
+}
+.profil-testi .image-profil-testi {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+/* ### testimoni End */
