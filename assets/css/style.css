@@ -10,7 +10,7 @@ ROOT CSS
     --oxford-blue: hsla(221, 33%, 15%, 1);
     --light-gray: hsla(216, 12%, 84%, 1);
     --white: hsla(0, 0%, 100%, 1);
-    --white_low: hsla(0, 0%, 100%, 0.1);
+    --white-low: rgba(255, 255, 255, 0.647);
     --black: hsla(0, 0%, 0%, 1);
     --black-low: rgba(0, 0, 0, 0.494);
     /*#### */
@@ -21,7 +21,8 @@ ROOT CSS
     --title-lg: 2rem;
     --title-lw: 1.8rem;
     --paragraf-lg: 1.4rem;
-    --paragraf-lw: 1.2rem;
+    --paragraf-lw: 1.1rem;
+    --paragraf-sm: 0.9rem;
 
     --fw-lg: 800;
     --fw-md: 600;
@@ -95,18 +96,27 @@ h6 {
     overflow-wrap: break-word;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.heading {
     font-size: var(--heading-lw);
+    font-weight: var(--fw-lg);
 }
 
-p {
+.paragraf {
     font-size: var(--paragraf-lw);
     color: var(--black);
+}
+.btn {
+    display: inline-block;
+    font-size: var(--paragraf-lg);
+    font-weight: var(--fw-lg);
+    background-color: var(--color-2);
+    color: var(--white);
+    padding: 0.8rem 10rem;
+    box-shadow: var(--shadow-lw);
+    border-radius: 0.4rem;
+}
+.btn:hover {
+    background-color: rgba(255, 205, 11, 0.834);
 }
 
 img,
@@ -161,7 +171,7 @@ table {
     margin: 0 auto;
 }
 .navbar.sticky {
-    padding: 1.4rem 0;
+    padding: 1.2rem 0;
     background-color: var(--color-low);
 }
 
@@ -174,8 +184,9 @@ table {
     position: fixed;
     top: 0;
     left: 0;
-    padding: 1.7rem 0;
+    padding: 1.6rem 0;
     transition: var(--transition-2);
+    z-index: 10;
 }
 .navbar .container {
     display: flex;
@@ -201,7 +212,7 @@ table {
     position: absolute;
     top: 100%;
     right: -100%;
-    background-color: var(--color-low2);
+    background-color: var(--color-2);
     width: 60%;
     height: 100vh;
     transition: var(--transition-2);
@@ -220,6 +231,18 @@ table {
 .nav-navbar .nav-link:hover {
     color: var(--white);
 }
+.nav-navbar .nav-link::after {
+    content: "";
+    width: 60px;
+    display: block;
+    padding-bottom: 0.4rem;
+    border-bottom: 0.1rem solid #bb0000;
+    transform: scaleX(0);
+    transition: var(--transition-3);
+}
+.nav-navbar .nav-link:hover::after {
+    transform: scaleX(1);
+}
 
 .nav-fitur {
     display: flex;
@@ -234,3 +257,87 @@ table {
     font-size: var(--heading-lw);
 }
 /* ### Navbar End */
+
+/* ### Header Start */
+.header {
+    width: 100%;
+    padding: 8rem 0 2rem 0;
+}
+
+.header .container {
+    width: 98%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+.header-text {
+    padding-top: 0.4rem;
+    text-align: center;
+    color: var(--black);
+    line-height: 1.2;
+}
+.header-text .heading {
+    font-size: var(--heading-lw);
+    font-weight: var(--fw-lg);
+    padding-bottom: 1rem;
+}
+.header-text .pafagraf {
+    font-size: var(--paragraf-lw);
+}
+.header-text .btn {
+    margin-top: 1.4rem;
+}
+.img-header {
+    width: 350px;
+    filter: saturate(1);
+}
+
+/* ### Header End */
+
+/* ### About Start */
+.about,
+.menu {
+    width: 100%;
+    padding: 8rem 0 2rem;
+}
+.about .heading,
+.menu .heading {
+    position: relative;
+    color: var(--black);
+    text-align: center;
+    font-size: var(--title-lg);
+    font-weight: var(--fw-lg);
+    padding: 0;
+}
+.about .heading::before {
+    content: "";
+    border-left: 0.3rem solid var(--color-2);
+    padding-left: 0.8rem;
+}
+.about .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+.about-text {
+    text-align: left;
+    color: var(--black);
+}
+.about-text .h-about {
+    font-size: var(--title-lw);
+    padding: 0.5rem 0;
+}
+.about-text .p-about {
+    font-size: var(--paragraf-lw);
+}
+.img-about {
+    width: 260px;
+    padding: 3rem 0;
+}
+/* ### about End */
+
+/* ### Menu Start */
+
+/* ### Menu End */

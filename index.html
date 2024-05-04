@@ -69,6 +69,62 @@
         </nav>
         <!-- Navbar End -->
 
+        <!-- Header Start -->
+        <header class="header">
+            <div class="container c-header">
+                <div class="header-text">
+                    <h1 class="heading h-header">
+                        Ayam Goyeng Jago Nya Semua Ayam
+                    </h1>
+                    <p class="pafagraf p-header">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Magnam totam doloremque libero eligendi, dolore
+                        vel.
+                    </p>
+                    <a href="#" class="btn btn-header">Buys</a>
+                </div>
+                <div class="header-image">
+                    <img
+                        src="assets/image/ayam2.png"
+                        alt="Header Image"
+                        class="img-header"
+                    />
+                </div>
+            </div>
+        </header>
+        <!-- Header End -->
+
+        <!-- About Start -->
+        <section class="about" id="about">
+            <h2 class="heading">About Me</h2>
+            <div class="container">
+                <div class="about-text">
+                    <h3 class="h-about">Ayam Goyeng ?</h3>
+                    <p class="paragraf p-about">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Accusantium architecto, temporibus distinctio
+                        molestiae cum. Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit. Quas, architecto!
+                    </p>
+                </div>
+                <div class="about-images">
+                    <img
+                        src="assets/image/ayam6.png"
+                        alt=""
+                        class="img-about"
+                    />
+                </div>
+            </div>
+        </section>
+        <!-- About End -->
+
+        <!-- Menu Start -->
+        <section class="menu" id="menu">
+            <h2 class="heading">Menu</h2>
+            <div class="container"></div>
+        </section>
+        <!-- Menu End -->
+
         <!-- Javascript -->
         <script
             type="text/javascript"
@@ -82,6 +138,26 @@
             src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/fontawesome.min.js"
         ></script>
         <!-- GsAp Javascript -->
-        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+        <script>
+            const gs = gsap.timeline();
+            gs.from(".header-image", {
+                x: -500,
+                start: "center center",
+                end: "bottom bottom",
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    pin: true,
+                    scrub: 1,
+                    trigger: ".header-text"
+                },
+                stagger: {
+                    amount: 1
+                }
+            });
+        </script>
+        <!--## -->
     </body>
 </html>
