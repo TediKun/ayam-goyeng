@@ -339,5 +339,53 @@ table {
 /* ### about End */
 
 /* ### Menu Start */
-
+.menu .container {
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+.menu .container .box-menu {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.3rem;
+}
+.box-menu .top-menu {
+}
+.box-menu .top-menu .image-menu {
+    border-radius: 0.3rem;
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    object-position: center;
+}
+.hover_menu {
+    display: none;
+}
+.content-menu .btn.btn-menu {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    padding: 0.6rem 0;
+    border-radius: 0.2rem;
+    margin-top: 0.5rem;
+}
+.content-menu .menu-title {
+    font-size: var(--paragraf-lg);
+    color: var(--black);
+    font-weight: var(--fw-lg);
+    padding: 0.2rem 0;
+}
+.content-menu .price_menu {
+    color: #bb0000;
+    font-size: var(--paragraf-lw);
+    font-weight: var(--fw-lg);
+}
+.content-menu {
+    padding-top: 0.8rem;
+}
 /* ### Menu End */
