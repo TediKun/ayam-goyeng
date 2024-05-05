@@ -33,7 +33,7 @@ ROOT CSS
     --shadow-lg: 0 0 10px rgba(8, 11, 14, 0.721);
     --shadow-md: 0 0 6px rgba(19, 24, 31, 0.713);
     --shadow-lw: 0 0 3px rgba(22, 25, 29, 0.68);
-    --shadow-sm: 0 0 13px rgba(60, 72, 88, 0.369);
+    --shadow-sm: 0 0 6px rgba(60, 72, 88, 0.369);
 
     --linear-gradient-1: linear-gradient(
         to top left,
@@ -72,7 +72,6 @@ body {
     -webkit-font-smoothing: antialiased;
     color: var(--black-low);
     background-color: var(--white);
-    height: 1000vh;
     font-family: "Poppins", sans-serif;
 }
 
@@ -197,7 +196,8 @@ table {
     width: 40px;
     padding-bottom: 6px;
 }
-.nav-logo {
+.nav-logo,
+.logo-footer {
     display: flex;
     align-items: center;
     gap: 4px;
@@ -205,7 +205,8 @@ table {
     font-weight: var(--fw-lg);
 }
 
-.nav-logo span {
+.nav-logo span,
+.logo-footer span {
     color: hsl(0, 100%, 33.2%);
 }
 .nav-navbar {
@@ -298,13 +299,15 @@ table {
 /* ### About Start */
 .about,
 .menu,
-.testimoni {
+.testimoni,
+.contact {
     width: 100%;
     padding: 8rem 0 2rem;
 }
 .about .heading,
 .menu .heading,
-.testimoni .heading {
+.testimoni .heading,
+.contact .heading {
     position: relative;
     color: var(--black);
     text-align: center;
@@ -487,3 +490,88 @@ table {
     border-radius: 100%;
 }
 /* ### testimoni End */
+
+/* ### Contact Start */
+.contact {
+    padding: 6rem 0 2rem;
+}
+
+.contact .form-contact {
+    width: 94%;
+    max-width: 70rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1.4rem 1.2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    margin-top: 1.5rem;
+}
+.form-contact .form-top {
+    display: flex;
+    flex-direction: column;
+}
+.form-contact label {
+    color: var(--black-low);
+    font-weight: var(--fw-md);
+    padding-left: 2px;
+    margin-top: 0.6rem;
+}
+.form-top input {
+    border: 0.1rem solid var(--black-low);
+    outline: none;
+    padding: 0.6rem 0.4rem;
+    border-radius: 4px;
+}
+.form-contact textarea {
+    border: 0.1rem solid var(--black-low);
+    height: 80px;
+    outline: none;
+    padding: 0.6rem 0.4rem;
+    border-radius: 4px;
+}
+.form-contact .btn-contact {
+    margin-top: 1rem;
+    padding: 0.6rem 0;
+    font-size: var(--paragraf-lw);
+    box-shadow: none;
+}
+
+/* ### Contact End */
+
+/* ### footer start */
+footer {
+    background-color: rgba(255, 203, 0, 0.502);
+    padding: 1.4rem 0 1rem;
+    margin-top: 6rem;
+}
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+}
+.logo-footer {
+    font-size: var(--paragraf-lg);
+    padding: 0 0.3rem;
+}
+.logo-footer .image-nav-logo {
+    width: 30px;
+    padding-bottom: 6px;
+}
+.sosial-media {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: var(--paragraf-lg);
+    padding-bottom: 0.6rem;
+}
+.sosial-media .link-sosmed {
+    padding: 0.2rem;
+}
+.copyright {
+    font-size: var(--paragraf-sm);
+}
+/* ### footer End */
