@@ -2,12 +2,35 @@
 const barsMenu = document.querySelector(".bars-menu");
 const navbarMenu = document.querySelector(".nav-navbar");
 const navLink = document.querySelectorAll(".nav-link");
-barsMenu.addEventListener("click", () => {
+barsMenu.addEventListener("click", a => {
     navbarMenu.classList.toggle("active");
+    a.preventDefault();
 });
+//### Search Navbar
+const searchBtn = document.querySelector(".search");
+const searchNavbar = document.querySelector(".search-navbar");
+searchBtn.addEventListener("click", a => {
+    searchNavbar.classList.toggle("active");
+    a.preventDefault();
+});
+//###
+//### Shopping Card
+const shopBtn = document.querySelector(".shop");
+const shoppingSlide = document.querySelector(".shopping-slide");
+shopBtn.addEventListener("click", a => {
+    shoppingSlide.classList.toggle("active");
+    a.preventDefault();
+});
+//###
 document.addEventListener("click", function (a) {
     if (!navbarMenu.contains(a.target) && !barsMenu.contains(a.target)) {
         navbarMenu.classList.remove("active");
+    }
+    if (!searchBtn.contains(a.target) && !searchNavbar.contains(a.target)) {
+        searchNavbar.classList.remove("active");
+    }
+    if (!shoppingSlide.contains(a.target) && !shopBtn.contains(a.target)) {
+        shoppingSlide.classList.remove("active");
     }
 });
 navLink.forEach(function (val, i) {

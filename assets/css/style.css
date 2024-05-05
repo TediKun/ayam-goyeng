@@ -33,7 +33,7 @@ ROOT CSS
     --shadow-lg: 0 0 10px rgba(8, 11, 14, 0.721);
     --shadow-md: 0 0 6px rgba(19, 24, 31, 0.713);
     --shadow-lw: 0 0 3px rgba(22, 25, 29, 0.68);
-    --shadow-sm: 0 0 6px rgba(60, 72, 88, 0.369);
+    --shadow-sm: 0 0 4px rgba(60, 72, 88, 0.369);
 
     --linear-gradient-1: linear-gradient(
         to top left,
@@ -257,6 +257,86 @@ table {
 .nav-fitur .fiture.bars-menu {
     font-size: var(--heading-lw);
 }
+/* search navbar */
+.search-navbar {
+    position: absolute;
+    top: 100%;
+    right: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    padding: 0 0.4rem;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: var(--transition-3);
+}
+.search-navbar.active {
+    transform: scaleY(1);
+}
+.search-navbar input {
+    width: 30rem;
+    height: 3.4rem;
+    font-size: var(--paragraf-lg);
+    padding: 0.6rem;
+    border-radius: 0.4rem;
+    border: 0.2rem solid var(--black-low);
+}
+.search-navbar .search-icn {
+    font-size: var(--paragraf-lg);
+    font-weight: var(--fw-lg);
+    color: var(--black);
+    background-color: var(--color-2);
+    border-radius: 0.2rem;
+    padding: 0.8rem 0.6rem;
+}
+/* Shopping Card */
+.shopping-slide {
+    width: 60%;
+    height: 100vh;
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: var(--color-2);
+    padding: 1rem 0.4rem;
+    transition: var(--transition-3);
+}
+.shopping-slide.active {
+    right: 0;
+}
+.shopping-item {
+    position: relative;
+    display: flex;
+    gap: 0.6rem;
+    background-color: var(--white);
+    padding: 0.2rem;
+    border-radius: 0.3rem;
+    margin-top: 0.5rem;
+    box-shadow: var(--shadow-sm);
+}
+.shopping-item .image-item-shop {
+    width: 60px;
+    height: 50px;
+    border-radius: 0.4rem;
+}
+.content-shopping .name-menu-shop {
+    font-size: var(--paragraf-lw);
+    font-weight: var(--fw-lg);
+    color: var(--black);
+}
+.content-shopping .price-menu-shop {
+    font-size: var(--paragraf-sm);
+    font-weight: var(--fw-md);
+    color: #bb0000;
+}
+.trash-shopping {
+    font-size: var(--paragraf-lw);
+    padding: 0.3rem;
+    position: absolute;
+    top: 40%;
+    right: 0.8rem;
+    color: rgb(255, 5, 5);
+}
+
 /* ### Navbar End */
 
 /* ### Header Start */
@@ -438,7 +518,6 @@ table {
     top: 50%;
     transform: translateY(-50%);
     background: #bb0000;
-    box-shadow: var(--shadow-sm);
     width: 0.8rem;
     height: 0.8rem;
     border-radius: 50%;
@@ -476,7 +555,6 @@ table {
 }
 .rating-testi .icn-star {
     color: var(--color-2);
-    text-shadow: var(--shadow-sm);
 }
 .rating-testi .no-rattesti {
     font-size: 0.9rem;
