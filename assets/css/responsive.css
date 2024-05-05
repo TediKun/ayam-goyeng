@@ -43,6 +43,166 @@
     html {
         font-size: 62.5%;
     }
+    /* Navbar Start */
+    .nav-fitur {
+        gap: 16px;
+    }
+    /* search navbar */
+    .search-navbar {
+        right: 20%;
+        gap: 4px;
+        padding: 0 0.4rem;
+    }
+    .search-navbar.active {
+        transform: scaleY(1);
+    }
+    .search-navbar input {
+        width: 50rem;
+        height: 4rem;
+        padding: 1rem 0.6rem;
+    }
+    .search-navbar .search-icn {
+        padding: 1rem 0.6rem;
+    }
+    /* Shopping Card */
+    .shopping-slide {
+        width: 28%;
+    }
+    /* Navbar End */
+    /* Header Start */
+    .header {
+        padding: 15rem 0 2rem 0;
+    }
+    .header .container {
+        width: 98%;
+        flex-direction: row;
+        gap: 3rem;
+    }
+    .header-text {
+        width: 50%;
+        text-align: left;
+    }
+    .header-text .heading {
+        font-size: 4rem;
+        padding-bottom: 1rem;
+        line-height: 1.1;
+    }
+    .header-text .pafagraf {
+        width: 80%;
+        font-size: 1.4rem;
+        color: rgba(0, 0, 0, 0.573);
+    }
+    .header-text .btn {
+        padding: 0.8rem 5rem;
+    }
+    .img-header {
+        width: 500px;
+    }
+    /* Header End */
+    /* about start */
+    .about,
+    .menu,
+    .testimoni,
+    .contact {
+        padding: 15rem 0 2rem;
+    }
+    .about .heading,
+    .menu .heading,
+    .testimoni .heading,
+    .contact .heading {
+        font-size: 3.4rem;
+    }
+    .about .container {
+        flex-direction: row-reverse;
+        gap: 3rem;
+        padding: 2rem 0 0;
+    }
+    .about-text {
+        width: 48%;
+    }
+    .about-text .h-about {
+        font-size: 2.8rem;
+    }
+    .about-text .p-about {
+        font-size: 1.4rem;
+    }
+    .img-about {
+        width: 440px;
+    }
+    /* about End */
+    /* Menu start */
+    .menu .container {
+        width: 98%;
+        margin-top: 4rem;
+        gap: 10px;
+    }
+    .menu .container .box-menu {
+        width: 280px;
+    }
+    .box-menu .top-menu .image-menu {
+        height: 250px;
+    }
+    .content-menu .menu-title {
+        font-size: 2rem;
+    }
+    .content-menu .price_menu {
+        font-size: 1.6rem;
+        padding: 0.4rem 0;
+    }
+    /* menu End */
+
+    /* Testimoni start */
+    .checkpoint {
+        max-width: 44rem;
+    }
+    .checkpoint:nth-child(odd) {
+        transform: translateX(23.9rem);
+    }
+    .checkpoint:nth-child(even) {
+        transform: translateX(-20rem);
+    }
+    .profil-testi .title-testi {
+        font-size: 2rem;
+    }
+    .rating-testi .no-rattesti {
+        font-size: 1rem;
+    }
+    .box-testi .p-testi {
+        font-size: 1.4rem;
+        padding: 0.2rem 0.4rem;
+    }
+    .rating-testi {
+        padding: 0.6rem 0.4rem;
+    }
+    .profil-testi .image-profil-testi {
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+    }
+    /* testimoni End */
+
+    /* Contact Start */
+    .contact .form-contact {
+        width: 90%;
+        max-width: 60rem;
+    }
+    .form-contact .form-top {
+        flex-direction: row;
+        margin-bottom: 0.4rem;
+        gap: 0.4rem;
+    }
+    .form-contact label {
+        display: none;
+    }
+    .form-top input {
+        width: 100%;
+        max-width: 40rem;
+    }
+    .form-contact textarea {
+        height: 100px;
+    }
+
+    /* Contact End */
 }
 
 /* ###### */
@@ -64,6 +224,55 @@
     }
 
     /*   ### Navbar End */
+    /* Header Start */
+
+    .header-text {
+        width: 60%;
+    }
+    .header-text .heading {
+        font-size: 3.5rem;
+    }
+    .header-text .pafagraf {
+        width: 90%;
+        font-size: 1.3rem;
+    }
+
+    .img-header {
+        width: 450px;
+    }
+    /* Header End */
+    /*   ### about start */
+    .about .heading,
+    .menu .heading,
+    .testimoni .heading,
+    .contact .heading {
+        font-size: 3rem;
+    }
+    /*   ### about End */
+    /*   ### Testimoni start */
+    .checkpoint {
+        max-width: 34rem;
+    }
+    .checkpoint:nth-child(odd) {
+        transform: translateX(17rem);
+    }
+    .checkpoint:nth-child(even) {
+        transform: translateX(-17rem);
+    }
+    /*   ### Testimoni End */
+    /* Contact Start */
+    .contact .form-contact {
+        width: 90%;
+        max-width: 50rem;
+    }
+    .form-top input {
+        max-width: 30rem;
+    }
+    .form-contact textarea {
+        height: 120px;
+    }
+
+    /* Contact End */
 }
 
 /* ###### */

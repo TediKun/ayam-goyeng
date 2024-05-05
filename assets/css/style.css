@@ -393,7 +393,7 @@ table {
     text-align: center;
     font-size: var(--title-lg);
     font-weight: var(--fw-lg);
-    padding: 0;
+    padding: 1.2rem 0;
 }
 .about .heading::before {
     content: "";
@@ -487,6 +487,7 @@ table {
     padding-bottom: 2rem;
 }
 .checkpoint {
+    width: 100%;
     padding: 0.8rem 0;
     max-width: 34rem;
     position: relative;
