@@ -440,6 +440,7 @@ table {
     margin-top: 0.3rem;
 }
 .box-menu .top-menu {
+    position: relative;
 }
 .box-menu .top-menu .image-menu {
     border-radius: 0.3rem;
@@ -449,8 +450,26 @@ table {
     object-position: center;
 }
 .hover_menu {
+    position: absolute;
+    top: 0;
+    background-color: var(--black-low);
+    width: 100%;
+    height: 100%;
     display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: var(--transition-3);
 }
+.hover_menu.active {
+    display: flex;
+}
+.hover_menu button {
+    padding: 1rem 1.2rem;
+    color: var(--white);
+    font-size: 3rem;
+}
+
 .content-menu .btn.btn-menu {
     padding: 0;
     display: flex;

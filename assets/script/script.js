@@ -45,3 +45,16 @@ window.addEventListener("scroll", function () {
     navbar.classList.toggle("sticky", window.scrollY > 0);
 });
 //###
+
+//### Menu Masuk Keranjang
+const imgMenu = document.querySelectorAll(".image-menu");
+const menuHover = document.querySelectorAll(".hover_menu");
+const btnKeranjang = document.querySelectorAll("#add-cart");
+
+imgMenu.forEach(function (val, i) {
+    val.addEventListener("mouseover", i => {
+        menuHover.forEach(function (val, i, a) {
+            val.classList.toggle("active");
+        });
+    });
+});

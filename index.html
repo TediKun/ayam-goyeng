@@ -161,7 +161,7 @@
                         />
                         <span class="hover_menu">
                             <button id="add-cart">
-                                <i class="fa fa-cart-shopping"></i>
+                                <i class="fa fa-cart-shopping icn-shopping"></i>
                             </button>
                         </span>
                     </div>
@@ -403,27 +403,6 @@
             charset="utf-8"
             src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/fontawesome.min.js"
         ></script>
-        <!-- GsAp Javascript -->
-        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-
-        <script>
-            const gs = gsap.timeline();
-            gs.from(".header-image", {
-                x: -500,
-                start: "center center",
-                end: "bottom bottom",
-                opacity: 0,
-                duration: 1,
-                scrollTrigger: {
-                    pin: true,
-                    scrub: 1,
-                    trigger: ".header-text"
-                },
-                stagger: {
-                    amount: 1
-                }
-            });
-        </script>
         <!--## -->
     </body>
 </html>
